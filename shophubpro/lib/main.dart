@@ -12,11 +12,19 @@ class ShophubApp extends StatelessWidget {
     final List<Product> products = [
       Product(
         id: 1,
-        name: 'Product 1',
-        description: 'Description of Product 1',
+        name: 'Shoes',
+        description: 'High Quality Mokers',
         price: 9.99,
-        imageUrl: 'https://example.com/product1.jpg',
+        imageUrl: 'lib/assets/shoe.jpg',
       ),
+      Product(
+        id: 2,
+        name: 'Dresses',
+        description: 'Best Selling Dress',
+        price: 19.99,
+        imageUrl: 'lib/assets/dress.JPG',
+      ),
+      
       // Add more products here
     ];
 
