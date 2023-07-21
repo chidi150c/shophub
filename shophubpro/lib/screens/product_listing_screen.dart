@@ -12,11 +12,24 @@ class ProductListingScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(title: Text('Shophub')),
       body: ListView.builder(
-        itemCount: products.length,
-        itemBuilder: (context, index) {
-          return ProductCard(product: products[index]);
-        },
-      ),
+          itemCount: (products.length / 2).ceil(), // Number of rows in the GridView
+          itemBuilder: (context, rowIndex) {
+            final startingIndex = rowIndex * 2;
+            return Row(
+              children: [
+                Expanded(
+                  child: ProductCard(product: products[startingIndex]),
+                ),
+                SizedBox(width: 8), // Add spacing between products
+                Expanded(
+                  child: (startingIndex + 1 < products.length)
+                      ? ProductCard(product: products[startingIndex + 1])
+                      : SizedBox(), // Use SizedBox if the last row has an odd number of products
+                ),
+              ],
+            );
+          },
+        ),  
     );
   }
 }

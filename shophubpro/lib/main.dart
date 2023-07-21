@@ -15,14 +15,14 @@ class ShophubApp extends StatelessWidget {
         name: 'Shoes',
         description: 'High Quality Mokers',
         price: 9.99,
-        imageUrl: 'lib/assets/shoe.jpg',
+        imageUrl: 'images/shoe.jpg',
       ),
       Product(
         id: 2,
         name: 'Dresses',
         description: 'Best Selling Dress',
         price: 19.99,
-        imageUrl: 'lib/assets/dress.JPG',
+        imageUrl: 'images/dress.JPG',
       ),
       
       // Add more products here
